@@ -1,0 +1,6 @@
+# PHP
+vendor/
+
+# Python
+*.py[cod]
+__pycache__/

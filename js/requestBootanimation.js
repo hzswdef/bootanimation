@@ -1,11 +1,11 @@
 $('#submit').click(function() {
-    var file_data = $('#file').prop('files')[0];   
-    var form_data = new FormData();                  
+    var file_data = $('#file').prop('files')[0];
+    var form_data = new FormData();
     form_data.append('file', file_data);
     
     $.ajax({
-        url: 'create_bootanimation.php',
-        dataType: 'text',  // <-- what to expect back from the PHP script, if anything
+        url: 'bootanimation.php',
+        dataType: 'text',
         cache: false,
         contentType: false,
         processData: false,

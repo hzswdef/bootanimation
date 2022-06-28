@@ -1,5 +1,6 @@
 # PHP
 vendor/
+cache/
 
 # Python
 *.py[cod]

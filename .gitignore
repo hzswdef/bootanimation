@@ -5,3 +5,6 @@ cache/
 # Python
 *.py[cod]
 __pycache__/
+
+# other
+access_log

@@ -1,0 +1,173 @@
+header .section-wrapper {
+    padding: 20px 0;
+    
+    & .logo {
+        display: flex;
+        
+        & img {
+            width: 70px;
+        }
+        & span {
+            font-size: 1.6rem;
+            font-weight: 700;
+            padding: 0 12px;
+            align-self: center;
+            display: block;
+        }
+    }
+}
+
+section .section-wrapper {
+    & .upload-bl {
+        & input {
+        	width: 0.1px;
+        	height: 0.1px;
+        	opacity: 0;
+        	overflow: hidden;
+        	position: absolute;
+        	z-index: -1;
+        }
+        
+        & label {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            & .img-wrapper {
+                display: flex;
+                justify-content: center;
+                
+                & img {
+                    width: 128px;
+                }
+            }
+            & .label-title, .label-sub {
+                text-align: center;
+                padding-bottom: 12px;
+                font-size: 1.2rem;
+                position: relative;
+                
+                & a {
+                    color: #07b0da;
+                    z-index: 2;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            & .label-sub {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+    }
+    
+    & .settings-bl {
+        display: none;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        
+        & #file {
+            display: none;
+        }
+        
+        & .preview {
+            display: flex;
+            justify-content: center;
+            
+            & .preview-inner {
+                position: relative;
+                  -moz-transition: all .2s ease-in-out;
+                  -webkit-transition: all .2s ease-in-out;
+                  -ms-transition: all .2s ease-in-out;
+                  -o-transition: all .2s ease-in-out;
+                  transition: all .2s ease-in-out;
+                
+                & img {
+                    width: 300px;
+                    border-radius: 20px;
+                    filter: drop-shadow(0 0 10px rgba(0 ,0, 0, .5));
+                }
+                
+                &:hover:after {
+                    content: "click to change";
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    border-radius: 20px;
+                    background: rgba(0, 0, 0, .6);
+                }
+            }
+        }
+        
+        & #submit {
+            width: 160px;
+            padding: 12px 0;
+            border: none;
+            border-radius: 20px;
+            margin-top: 30px;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+    }
+}
+
+
+
+.input-url-bl {
+    display: none;
+    position: absolute;
+    background: rgba(20, 20, 30, .6);
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    
+    
+    & .wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        & #background {
+            position: absolute;
+            background: rgba(20, 20, 30, .6);
+            width: 100%;
+            height: 100%;
+            top: 0; left: 0;
+            z-index: 1;
+        }
+        
+        & .main {
+            width: 400px;
+            height: 280px;
+            background: white;
+            border-radius: 20px;
+            z-index: 2;
+        }
+    }
+}
+
+@media screen and (max-width: 568px) {
+    header .section-wrapper {
+        padding: 10px;
+        
+        & .logo {
+            & span {
+                font-weight: 500;
+            }
+        }
+    }
+}

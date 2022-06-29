@@ -15,11 +15,13 @@ class GIF
     public $data;
     
     public function __construct(string $path, $user_settings=[]) {
-        $this->GFE = new GifFrameExtractor\GifFrameExtractor();
-        $this->GFE->extract($path . 'original.gif');
-        
         $this->path = $path;
         $this->user_settings = $user_settings;
+        
+        $this->GFE = new GifFrameExtractor\GifFrameExtractor();
+        $this->GFE->extract(
+            $user_settings['fix'] ? $path . 'after_fix.gif' : $path . 'original.gif'
+        );
     }
     
     public function parse() {
@@ -29,7 +31,7 @@ class GIF
             $framename = str_pad($index, 10, '0', STR_PAD_LEFT);
             
             imagepng(
-                $frame,
+                $frame
                 $this->path . 'part0/' . $framename . '.png',
                 0, # Max PNG quality
                 PNG_NO_FILTER
@@ -170,7 +172,7 @@ class BUILD
     public function __construct() {
         $this->preset();
         
-        $this->GIF = new GIF($this->folder);
+        $this->GIF = new GIF($this->folder, []);
         $this->bootanimation = new bootanimation($this->folder);
         $this->archive = new ARCHIVE($this->folder);
         

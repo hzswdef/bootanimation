@@ -1,5 +1,5 @@
 {
     "require": {
-        "sybio/gif-frame-extractor": "^1.0"
+        "hzswdef/gif-frame-extractor": "^1.1"
     }
 }

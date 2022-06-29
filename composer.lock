@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc345b9ad57608442c9deac91bcc2fd9",
+    "content-hash": "49c2feab6ef97fc361577da69dd5f3a8",
     "packages": [
         {
-            "name": "sybio/gif-frame-extractor",
-            "version": "1.0.0",
+            "name": "hzswdef/gif-frame-extractor",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Sybio/GifFrameExtractor.git",
-                "reference": "13e9880add3ae9cca10a48a0a3897fe3d0069f71"
+                "url": "https://github.com/hzswdef/GifFrameExtractor.git",
+                "reference": "7ece83371b90ff31307d32b87a50122fd42d1a06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Sybio/GifFrameExtractor/zipball/13e9880add3ae9cca10a48a0a3897fe3d0069f71",
-                "reference": "13e9880add3ae9cca10a48a0a3897fe3d0069f71",
+                "url": "https://api.github.com/repos/hzswdef/GifFrameExtractor/zipball/7ece83371b90ff31307d32b87a50122fd42d1a06",
+                "reference": "7ece83371b90ff31307d32b87a50122fd42d1a06",
                 "shasum": ""
             },
             "require": {
@@ -38,10 +38,20 @@
                     "name": "Clément Guillemain",
                     "homepage": "http://clementguillemain.fr",
                     "role": "Developer / Freelancer"
+                },
+                {
+                    "name": "Renato Formato",
+                    "homepage": "https://github.com/rformato",
+                    "role": "Create a pull request #8 with bugfix."
+                },
+                {
+                    "name": "Anon",
+                    "homepage": "https://github.com/hzswdef",
+                    "role": "Merge pull #8 ;)"
                 }
             ],
             "description": "PHP class that separates all the frames (and their duration) of an animated GIF",
-            "homepage": "https://github.com/Sybio/GifFrameExtractor",
+            "homepage": "https://github.com/hzswdef/GifFrameExtractor",
             "keywords": [
                 "animated",
                 "duration",
@@ -52,10 +62,9 @@
                 "time"
             ],
             "support": {
-                "issues": "https://github.com/Sybio/GifFrameExtractor/issues",
-                "source": "https://github.com/Sybio/GifFrameExtractor/tree/master"
+                "source": "https://github.com/hzswdef/GifFrameExtractor/tree/1.1.0"
             },
-            "time": "2012-10-13T09:06:51+00:00"
+            "time": "2022-06-29T14:07:56+00:00"
         }
     ],
     "packages-dev": [],

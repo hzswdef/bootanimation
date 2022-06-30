@@ -57,7 +57,9 @@
                     </div>
                 </label>
                 
-                <input id="submit" type="button" value="START">
+                <button onclick="this.classList.toggle('button--loading')" class="button" id="submit" type="button" value="START">
+                    <span class="button__text">START</span>
+                </button>
             </div>
         </div>
     </section>

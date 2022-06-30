@@ -1,12 +1,14 @@
 <!doctype html>
 <html>
 <head>
+    <base href="/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/static/css/base.css">
     <link rel="stylesheet" href="/static/css/bootanimation.css">
     <link rel="icon" type="image/x-icon" href="/static/assets/favicon/favicon128.ico">
-    <script src="/static/js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flexmasonry/dist/flexmasonry.css">
+    
     <title>bootanimation</title>
 </head>
 <body>
@@ -61,6 +63,18 @@
                     <span class="button__text">START</span>
                 </button>
             </div>
+            
+            <div class="recent-bl">
+                <div class="title">
+                    Recent
+                </div>
+                
+                <div class="recent-items-wrapper">
+                    <?php
+                        include "getRecent.php";
+                    ?>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -74,8 +88,16 @@
 <!-- downloading response solution -->
 <iframe id="dl" style="display:none;"></iframe>
 
+<script src="/static/js/jquery-3.6.0.js"></script>
 <script src="/static/js/requestBootanimation.js"></script>
 <script src="/static/js/fromURL.js"></script>
+<script src="https://unpkg.com/flexmasonry/dist/flexmasonry.js"></script>
+<script>
+    FlexMasonry.init('.recent-items-wrapper', {
+        responsive: true,
+        numCols: 6
+    });
+</script>
 
 </body>
 </html>

@@ -1,0 +1,19 @@
+DirectoryIndex index.php
+
+AddDefaultCharset UTF-8
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)/$ $1.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .*[^/]$ %{REQUEST_URI}/ [L,R=301]
+
+php_value post_max_size 20M
+php_value upload_max_filesize 20M
+
+<FilesMatch ".(htaccess|json|lock)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>

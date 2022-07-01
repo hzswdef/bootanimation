@@ -1,9 +1,11 @@
 <!doctype html>
 <html>
 <head>
-    <base href="/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Create bootanimation online in one click! Also may download ready bootanimations.">
+    <meta name="keywords" content="bootanimation, anime bootanimation, bootanimation anime, bootanimation gif, bootanimation gif, bootanimation maker, bootanimation online, bootanimation edit, bootanimation make, bootaniamation 4pda, bootanimation xda">
+
     <link rel="stylesheet" href="/static/css/base.css">
     <link rel="stylesheet" href="/static/css/bootanimation.css">
     <link rel="icon" type="image/x-icon" href="/static/assets/favicon/favicon128.ico">

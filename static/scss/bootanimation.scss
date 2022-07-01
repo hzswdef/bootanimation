@@ -152,7 +152,9 @@ section .section-wrapper {
         
         & .recent-items-wrapper {
             width: 100%;
+            padding: 8px 0;
             height: 1200px!important;
+            overflow: hidden;
             
             & .recent-item {
                 width: 33.3%;
@@ -161,7 +163,7 @@ section .section-wrapper {
                 & img {
                     width: 94%;
                     margin: 0 3%;
-                    filter: drop-shadow(0 0 8px rgba(0 ,0, 0, .5));
+                    filter: drop-shadow(0 0 4px rgba(0 ,0, 0, .35));
                     border-radius: 20px;
                 }
             }
@@ -228,10 +230,8 @@ section .section-wrapper {
                 height: 600px!important;
                 
                 & .recent-item {
-                    width: 33.3%;
-                    
                     & img {
-                        filter: drop-shadow(0, 0, 4px, rgba(0, 0, 0, .3));
+                        filter: drop-shadow(0 0 2px rgba(0 ,0, 0, .5));
                     }
                 }
             }

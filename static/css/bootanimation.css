@@ -133,7 +133,9 @@ section .section-wrapper .recent-bl .title:after {
 }
 section .section-wrapper .recent-bl .recent-items-wrapper {
   width: 100%;
+  padding: 8px 0;
   height: 1200px !important;
+  overflow: hidden;
 }
 section .section-wrapper .recent-bl .recent-items-wrapper .recent-item {
   width: 33.3%;
@@ -142,7 +144,7 @@ section .section-wrapper .recent-bl .recent-items-wrapper .recent-item {
 section .section-wrapper .recent-bl .recent-items-wrapper .recent-item img {
   width: 94%;
   margin: 0 3%;
-  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.35));
   border-radius: 20px;
 }
 
@@ -194,11 +196,8 @@ section .section-wrapper .recent-bl .recent-items-wrapper .recent-item img {
   section .section-wrapper .recent-bl .recent-items-wrapper {
     height: 600px !important;
   }
-  section .section-wrapper .recent-bl .recent-items-wrapper .recent-item {
-    width: 33.3%;
-  }
   section .section-wrapper .recent-bl .recent-items-wrapper .recent-item img {
-    filter: drop-shadow(0, 0, 4px, rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
   }
 }
 .button {

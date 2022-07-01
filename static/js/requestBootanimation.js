@@ -16,8 +16,6 @@ function sendRequest(url=null) {
         var form_data = {'url': $('#inputURL').val()}
     }
     
-    
-    
     $.ajax({
         url: 'bootanimation.php',
         dataType: 'text',
@@ -28,7 +26,11 @@ function sendRequest(url=null) {
         data: form_data,
         success: function(data) {
             $('#submit').removeClass('button--loading');
-            alert(data);
+            //alert(data);
+            
+            // Update 'Recent' section
+            getRecent();
+            
             document.getElementById('dl').src = data;
         }
     });

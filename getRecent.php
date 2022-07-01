@@ -1,28 +1,49 @@
 <?php
 
-$folders = [];
-$tmp = [];
-
-foreach (glob(__DIR__ . '/tmp/*') as $folder) {
-    $timestamp = filemtime($folder);
+class recent
+{
+    private function get_folders() {
+        $folders = [];
+        $tmp = [];
+        
+        foreach (glob(__DIR__ . '/tmp/*') as $folder) {
+            $timestamp = filemtime($folder);
+            
+            $folders[] = [
+                'path' => str_replace(__DIR__, '', $folder),
+                'timestamp' => $timestamp
+            ];
+            $tmp[] = $timestamp;
+        }
+        
+        return $this->sort_folders($folders, $tmp);
+    }
     
-    $folders[] = [
-        'path' => str_replace(__DIR__, '', $folder),
-        'timestamp' => $timestamp
-    ];
+    private function sort_folders($folders, $tmp) {
+        array_multisort($tmp, SORT_DESC, $folders);
+        array_slice($folders, 0, 20);
+        
+        return $folders;
+    }
     
-    $tmp[] = $timestamp;
+    public function return_response() {
+        $response = [];
+        
+        foreach ($this->get_folders() as $index => $folder) {
+            $path = $folder["path"] . '/original.gif';
+            
+            $response[] = join("\n", [
+                "<div class='recent-item'>",
+                "<img src='$path' alt='bootanimation'>",
+                "</div>"
+            ]);
+        }
+        
+        die(join("\n", $response));
+    }
 }
-array_multisort($tmp, SORT_DESC, $folders);
-array_slice($folders, 0, 10);
-#array_multisort($folders, array('timestamp'=>SORT_DESC));
 
-foreach ($folders as $folder) {
-    ?>
-        <div class="recent-item">
-            <img src="<? echo $folder['path'] . '/original.gif'; ?>" alt="bootanimation">
-        </div>
-    <?
-}
+$recent = new recent();
+$recent->return_response();
 
 ?>

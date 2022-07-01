@@ -70,9 +70,7 @@
                 </div>
                 
                 <div class="recent-items-wrapper">
-                    <?php
-                        include "getRecent.php";
-                    ?>
+                    <!--  -->
                 </div>
             </div>
         </div>
@@ -91,11 +89,12 @@
 <script src="/static/js/jquery-3.6.0.js"></script>
 <script src="/static/js/requestBootanimation.js"></script>
 <script src="/static/js/fromURL.js"></script>
+<script src="/static/js/getRecent.js"></script>
 <script src="https://unpkg.com/flexmasonry/dist/flexmasonry.js"></script>
 <script>
     FlexMasonry.init('.recent-items-wrapper', {
         responsive: true,
-        numCols: 6
+        numCols: 3
     });
 </script>
 

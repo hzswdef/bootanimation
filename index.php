@@ -80,7 +80,7 @@
     
     <footer>
         <div class="section-wrapper">
-            
+            <? echo ""; ?>
         </div>
     </footer>
 </div>
